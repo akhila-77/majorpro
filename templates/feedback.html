@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="POST" action="{{url_for('feedback')}}">
+        <input type="text" placeholder="Enter Your Name" name="name" required><br>
+        <input type="email" placeholder="Enter your email" name="email" required><br>
+        <textarea placeholder="enter feedback" name="feedback"></textarea><br>
+        <input type="submit" value="submit" name="submti">
+    </form>
+    {{msg}}
+    {% for i in data %}
+    {{i}}
+    {% endfor %}
+    </body>
+</html>
